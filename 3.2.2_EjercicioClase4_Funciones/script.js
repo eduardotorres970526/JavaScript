@@ -40,6 +40,15 @@ agregarLibro(prompt("Hola!! Qué libro leíste en el mes de Octubre?"));
 agregarLibro(prompt("Hola!! Qué libro leíste en el mes de Noviembre?"));
 agregarLibro(prompt("Hola!! Qué libro leíste en el mes de Diciembre?"));
 
-console.log(librosLeidos)
+
+
+function imprimirLibros() {
+    console.log("Lista de libros leídos");
+    for (let i = 0; i < librosLeidos.length; i++) {
+        console.log((i + 1) + ". " + (librosLeidos[i]));
+    }
+}
+
+imprimirLibros()
 
 
