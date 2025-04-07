@@ -14,13 +14,17 @@
  
  */
  
-     function Libros() {
-        this.titulo = titulo
-        this.autor = autor
-        this.anio = anio
-        this.disponibilidad = disponibilidad
+     function Libros(titulo, autor, anio, disponibilidad) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.anio = anio;
+        this.disponibilidad = disponibilidad;
         this.descripcion = function(){
             console.log("El libro: " + '"' + this.titulo + '"' + " escrito por " + this.autor + " en el año " + this.anio + ", se encuentra " + this.disponibilidad);
         }
 
      }
+
+     let libro1 = new Libros("El Principito", "Antoine de Saint", 1943, "disponible"); 
+     libro1.descripcion();
+

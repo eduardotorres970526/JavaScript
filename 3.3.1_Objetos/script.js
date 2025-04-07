@@ -71,6 +71,8 @@
         this.nombre = nuevoNombre;
         this.tipo = tipo;
         this.edad = edad;
+
+        
         this.colorDePelaje = colorDePelaje;
         this.estaEsterilizado = estaEsterilizado;
         this.humano = humano;
