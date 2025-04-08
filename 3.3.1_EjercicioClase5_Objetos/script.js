@@ -26,5 +26,18 @@
      }
 
      let libro1 = new Libros("El Principito", "Antoine de Saint", 1943, "disponible"); 
+     console.log(libro1.titulo);
+     console.log(libro1.autor);
+     console.log(libro1.anio);
      libro1.descripcion();
+
+     let libro2 = new Libros("Yo Robot", "Isaac Asimov", 1950, "no disponible");
+     console.log(libro2.titulo);
+     console.log(libro2.autor);
+     console.log(libro2.anio);
+     libro2.descripcion();
+
+
+
+
 
