@@ -1,0 +1,79 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    padding: 30px;
+    color: #333;
+    margin: 100px;
+  }
+  
+  /* Título principal */
+  #titulo {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  /* Etiqueta del input */
+  label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Caja de texto */
+  #inputComentarios {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    justify-content: start;
+    box-shadow: 6px 6px 8px -3px rgba(0,0,0,0.75);
+  }
+
+  #inputComentarios:focus {
+    outline: none;
+    border-color: #3498db;
+    
+}
+
+
+  /* Botón */
+  button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 6px 6px 8px -3px rgba(0,0,0,0.75);
+    
+  
+  }
+  
+  button:hover {
+    background-color: #78bcf3;
+    
+  }
+  
+  /* Título de comentarios */
+  h3 {
+    margin-top: 30px;
+  }
+  
+  /* Lista de comentarios */
+  #listaComentariosUl {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  #listaComentariosUl li {
+    background-color: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 5px solid #3498db;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
