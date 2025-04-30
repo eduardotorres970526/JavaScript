@@ -1,32 +1,50 @@
-      const input = document.getElementById("inputComentarios");
-      const boton = document.getElementById("btnAgregar");
-      const lista = document.getElementById("listaComentariosUl");
+ const input = document.getElementById("inputComentarios");
+ const boton = document.getElementById("btnAgregar");
+ const lista = document.getElementById("listaComentariosUl");
 
-      boton.addEventListener("click", () => {
-        const texto = input.value.trim();
 
-        if (texto !== "") {
-          const li = document.createElement("li");
+  function agregarComentario() {
+  const texto = input.value.trim(); 
 
-          const fechaHora = new Date().toLocaleString();
 
-          li.innerHTML = `
-            ${texto}
-            <div class="fecha">${fechaHora}</div>
-            <button class="btnEliminar">Eliminar</button>
-          `;
+  if (texto !== ""){
 
-          // Agrega el comentario a la lista
-          lista.appendChild(li);
+  const li = document.createElement("li");
 
-          // Limpia el campo de texto
-          input.value = "";
+  const comentarioTexto = document.createTextNode(texto);
+  li.appendChild(comentarioTexto); 
 
-          // Evento para eliminar el comentario
-          li.querySelector(".btnEliminar").addEventListener("click", () => {
-            lista.removeChild(li);
-          });
-        } else {
-          alert("Por favor escribe un comentario.");
-        }
-      });
+  const fechaHora = new Date().toLocaleString();
+  const divFecha = document.createElement("div");
+  divFecha.className = "fecha"; 
+  divFecha.textContent = fechaHora;
+  li.appendChild(divFecha);
+
+  const botonEliminar = document.createElement("button");
+  botonEliminar.className = "btnEliminar";
+  botonEliminar.textContent = "Eliminar";
+  li.appendChild(botonEliminar);
+
+  botonEliminar.addEventListener("click", () => {
+    lista.removeChild(li);
+  })
+
+  
+  lista.appendChild(li);
+  input.value = "";
+
+  }else{
+    alert("Por favor, escribe un comentario antes de agregarlo.");
+
+  }
+  }
+
+  // 2. Usamos la misma función en el botón
+boton.addEventListener("click", agregarComentario);
+
+// 3. Y también cuando presionas Enter
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") { 
+    agregarComentario();
+  }
+});
